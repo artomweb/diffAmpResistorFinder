@@ -35,6 +35,12 @@ function convertToString(intValue) {
   }
 }
 
+function removeDuplicates(array) {
+  return array.filter((pair, index) => {
+    return index === array.findIndex((item) => item[0] === pair[0] && item[1] === pair[1]);
+  });
+}
+
 document.getElementById("calcForm").addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -66,6 +72,8 @@ document.getElementById("calcForm").addEventListener("submit", function (event) 
   // console.log(errors);
 
   let sortedValues = errors.slice().sort((a, b) => Math.abs(a[2]) - Math.abs(b[2]));
+
+  sortedValues = removeDuplicates(sortedValues);
 
   for (let i = 0; i < 10; i++) {
     console.log(sortedValues[i]);
