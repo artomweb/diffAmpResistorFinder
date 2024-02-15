@@ -1,5 +1,5 @@
 function convertToInt(s) {
-  console.log(s);
+  // console.log(s);
   let indexOfK = s.indexOf("k");
   if (indexOfK !== -1) {
     s = parseFloat(s.replace("k", "."));
@@ -62,7 +62,7 @@ document.getElementById("calcForm").addEventListener("submit", function (event) 
     }
   }
 
-  console.log(errors);
+  // console.log(errors);
 
   let sortedValues = errors.slice().sort((a, b) => Math.abs(a[2]) - Math.abs(b[2]));
 
@@ -74,6 +74,8 @@ document.getElementById("calcForm").addEventListener("submit", function (event) 
   let resultTableBody = document.createElement("tbody");
   let resultTableHead = document.createElement("thead");
   let resultTableHeaderRow = document.createElement("tr");
+
+  resultTable.innerHTML = "";
 
   let cell1 = document.createElement("th");
   let cell2 = document.createElement("th");
