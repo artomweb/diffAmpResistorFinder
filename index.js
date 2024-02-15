@@ -46,7 +46,8 @@ document.getElementById("calcForm").addEventListener("submit", function (event) 
     .getElementById("resistorValues")
     .value.split("\n")
     .filter((line) => line.trim() !== "")
-    .map(convertToInt);
+    .map(convertToInt)
+    .filter((int) => !isNaN(int));
 
   // Calculate
   var valToFind = outputVoltage / (maxCurrent * shuntResistance);
