@@ -77,13 +77,13 @@
         <h2>Calculate Best Resistors to use</h2>
         <form id="calcForm">
           <label for="outputVoltage">Output Voltage (V):</label>
-          <input value="3.3" type="number" id="outputVoltage" name="outputVoltage" required /><br /><br />
+          <input value="3.3" type="number" id="outputVoltage" name="outputVoltage" step="any" required /><br /><br />
 
           <label for="shuntResistance">Shunt Resistance (Ω):</label>
-          <input value="1.1" type="number" id="shuntResistance" name="shuntResistance" required /><br /><br />
+          <input value="1.1" type="number" id="shuntResistance" name="shuntResistance" step="any" required /><br /><br />
 
           <label for="maxCurrent">Maximum Current (A):</label>
-          <input value=".6" type="number" id="maxCurrent" name="maxCurrent" required /><br /><br />
+          <input value=".6" type="number" id="maxCurrent" name="maxCurrent" step="any" required /><br /><br />
 
           <div class="center-label">
             <label for="resistorValues">YOUR Resistor Values (each value on a new line):</label>
